@@ -38,19 +38,24 @@ const elements = {
 // --- Data Loading ---
 async function loadTools() {
   try {
-    const [mainRes, extRes] = await Promise.all([
+    const [mainRes, extRes, newRes] = await Promise.all([
       fetch('data/tools.json'),
       fetch('data/tools-extended.json').catch(() => null),
+      fetch('data/tools-new.json').catch(() => null),
     ]);
 
     const mainTools = await mainRes.json();
     let extTools = [];
+    let newTools = [];
 
     if (extRes && extRes.ok) {
       extTools = await extRes.json();
     }
+    if (newRes && newRes.ok) {
+      newTools = await newRes.json();
+    }
 
-    state.tools = [...mainTools, ...extTools];
+    state.tools = [...mainTools, ...extTools, ...newTools];
     state.filteredTools = [...state.tools];
 
     updateStats();
