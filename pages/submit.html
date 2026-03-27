@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Your AI Tool — AI Tools Directory</title>
+  <meta name="description" content="Submit your AI tool to be featured in our curated directory. Reach thousands of developers, creators, and professionals.">
+  <link rel="canonical" href="https://ai-tools-directory.netlify.app/pages/submit.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <a href="../index.html" class="header__logo" aria-label="AI Tools Directory Home">
+        <span class="header__logo-icon">🤖</span>
+        <span>AI Tools<span style="color: var(--accent-secondary)">.</span>dir</span>
+      </a>
+      <nav class="header__nav" id="main-nav">
+        <a href="../index.html#tools">Browse Tools</a>
+        <a href="../index.html#newsletter">Newsletter</a>
+        <a href="submit.html">Submit Tool</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button class="header__mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="container">
+      <h1 class="page-title">Submit Your AI Tool</h1>
+      <p class="page-subtitle">
+        Want your tool featured in our directory? Fill out the form below. 
+        We review every submission and add qualifying tools within 48 hours.
+      </p>
+
+      <div class="form-card">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="submit-form">
+          <div class="form-group">
+            <label for="tool-name">Tool Name *</label>
+            <input type="text" id="tool-name" name="tool_name" required placeholder="e.g. ChatGPT">
+          </div>
+
+          <div class="form-group">
+            <label for="tool-url">Tool Website URL *</label>
+            <input type="url" id="tool-url" name="tool_url" required placeholder="https://example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="tool-category">Category *</label>
+            <select id="tool-category" name="category" required>
+              <option value="">Select a category</option>
+              <option value="Chatbots">Chatbots</option>
+              <option value="Code">Code</option>
+              <option value="Image Generation">Image Generation</option>
+              <option value="Writing">Writing</option>
+              <option value="Video">Video</option>
+              <option value="Audio">Audio</option>
+              <option value="Productivity">Productivity</option>
+              <option value="Research">Research</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="tool-pricing">Pricing Model *</label>
+            <select id="tool-pricing" name="pricing" required>
+              <option value="">Select pricing</option>
+              <option value="free">Free</option>
+              <option value="freemium">Freemium</option>
+              <option value="paid">Paid</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="tool-description">Description *</label>
+            <textarea id="tool-description" name="description" required
+                      placeholder="Brief description of what your tool does (max 200 characters)"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-email">Your Email *</label>
+            <input type="email" id="contact-email" name="email" required placeholder="you@example.com">
+          </div>
+
+          <input type="hidden" name="_subject" value="New AI Tool Submission">
+
+          <button type="submit" class="form-submit">Submit Tool for Review</button>
+        </form>
+      </div>
+
+      <div style="margin-top: var(--space-2xl); padding: var(--space-xl); background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); max-width: 640px;">
+        <h3 style="font-size: 1.1rem; margin-bottom: var(--space-md);">💎 Want Premium Placement?</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+          Featured listings appear at the top of our directory with a ⭐ badge. 
+          Contact us at <a href="mailto:hello@aitools.dir">hello@aitools.dir</a> 
+          for sponsorship and featured placement options.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        <span>&copy; 2026 AI Tools Directory</span>
+        <a href="about.html#affiliate" style="color: var(--text-tertiary);">Affiliate Disclosure</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.getElementById('mobile-toggle');
+    const nav = document.getElementById('main-nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('mobile-open');
+        toggle.textContent = nav.classList.contains('mobile-open') ? '✕' : '☰';
+      });
+    }
+    // Header scroll
+    window.addEventListener('scroll', () => {
+      document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+  </script>
+</body>
+</html>

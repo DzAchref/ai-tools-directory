@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tools Directory — Discover the Best AI Tools in 2026</title>
+  <meta name="description" content="Curated directory of 24+ best AI tools for developers, creators, and professionals. Find the perfect AI tool for coding, writing, image generation, video, audio, and productivity.">
+  <meta name="keywords" content="AI tools, artificial intelligence, ChatGPT, Midjourney, GitHub Copilot, AI directory, best AI tools 2026">
+  <meta name="author" content="AI Tools Directory">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Tools Directory — Discover the Best AI Tools">
+  <meta property="og:description" content="Curated directory of 24+ best AI tools for developers, creators, and professionals.">
+  <meta property="og:url" content="https://ai-tools-directory.netlify.app">
+  <meta property="og:site_name" content="AI Tools Directory">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Tools Directory — Discover the Best AI Tools">
+  <meta name="twitter:description" content="Curated directory of 24+ best AI tools for developers, creators, and professionals.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://ai-tools-directory.netlify.app">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AI Tools Directory",
+    "url": "https://ai-tools-directory.netlify.app",
+    "description": "Curated directory of the best AI tools for developers, creators, and professionals.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://ai-tools-directory.netlify.app/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Google Analytics — replace G-XXXXXXXXXX with your Measurement ID -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script> -->
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <a href="/" class="header__logo" aria-label="AI Tools Directory Home">
+        <span class="header__logo-icon">🤖</span>
+        <span>AI Tools<span style="color: var(--accent-secondary)">.</span>dir</span>
+      </a>
+
+      <nav class="header__nav" id="main-nav" aria-label="Main navigation">
+        <a href="#tools">Browse Tools</a>
+        <a href="#newsletter">Newsletter</a>
+        <a href="pages/submit.html">Submit Tool</a>
+        <a href="pages/about.html">About</a>
+        <a href="pages/submit.html" class="header__cta">Submit Your Tool</a>
+      </nav>
+
+      <button class="header__mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Updated daily — March 2026
+        </div>
+
+        <h1 class="hero__title">
+          Discover the Best<br>
+          <span class="hero__title-gradient">AI Tools in 2026</span>
+        </h1>
+
+        <p class="hero__subtitle">
+          A curated collection of the most powerful AI tools for developers, 
+          creators, and professionals. Find your next favorite tool.
+        </p>
+
+        <div class="hero__search">
+          <span class="hero__search-icon">🔍</span>
+          <input type="search"
+                 id="search-input"
+                 class="hero__search-input"
+                 placeholder="Search tools by name, category, or feature..."
+                 aria-label="Search AI tools"
+                 autocomplete="off">
+        </div>
+
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-value" id="stat-tools">24+</span>
+            <span class="hero__stat-label">AI Tools</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-value" id="stat-categories">9</span>
+            <span class="hero__stat-label">Categories</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-value">100%</span>
+            <span class="hero__stat-label">Free to Use</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CATEGORIES ========== -->
+    <section class="categories" aria-label="Filter by category">
+      <div class="container">
+        <div class="categories__list" id="categories-list" role="tablist">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TOOLS GRID ========== -->
+    <section class="tools-section" id="tools" aria-label="AI Tools Directory">
+      <div class="container">
+        <div class="tools-section__header">
+          <div>
+            <h2 class="tools-section__title">All AI Tools</h2>
+            <span class="tools-section__count" id="tools-count">Loading...</span>
+          </div>
+          <div class="tools-section__sort">
+            <label for="sort-select">Sort by:</label>
+            <select id="sort-select">
+              <option value="featured">Featured</option>
+              <option value="rating">Highest Rated</option>
+              <option value="name">Name A-Z</option>
+              <option value="newest">Newest</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="tools-grid" id="tools-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== NEWSLETTER ========== -->
+    <section class="newsletter" id="newsletter">
+      <div class="container">
+        <div class="newsletter__card">
+          <h2 class="newsletter__title">Stay Ahead of the AI Curve</h2>
+          <p class="newsletter__subtitle">
+            Get weekly updates on the newest AI tools, industry trends, 
+            and exclusive deals delivered straight to your inbox.
+          </p>
+          <form class="newsletter__form" id="newsletter-form">
+            <input type="email"
+                   class="newsletter__input"
+                   placeholder="Enter your email"
+                   aria-label="Email address"
+                   required>
+            <button type="submit" class="newsletter__button">Subscribe</button>
+          </form>
+          <p class="newsletter__disclaimer">No spam, ever. Unsubscribe anytime.</p>
+          <p class="newsletter__success" id="newsletter-success">
+            ✅ You're in! Check your email for confirmation.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <a href="/" class="header__logo">
+            <span class="header__logo-icon">🤖</span>
+            <span>AI Tools<span style="color: var(--accent-secondary)">.</span>dir</span>
+          </a>
+          <p class="footer__brand-desc">
+            The most comprehensive directory of AI tools. Helping you find the perfect AI tool for every task.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Browse</h3>
+          <ul class="footer__links">
+            <li><a href="#tools">All Tools</a></li>
+            <li><a href="pages/collections/best-ai-coding-tools.html">Best AI Coding Tools</a></li>
+            <li><a href="pages/collections/best-free-ai-tools.html">Best Free AI Tools</a></li>
+            <li><a href="pages/collections/best-ai-image-generators.html">AI Image Generators</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Directory</h3>
+          <ul class="footer__links">
+            <li><a href="pages/submit.html">Submit a Tool</a></li>
+            <li><a href="pages/about.html">About Us</a></li>
+            <li><a href="pages/about.html#affiliate">Affiliate Disclosure</a></li>
+            <li><a href="#newsletter">Newsletter</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Connect</h3>
+          <ul class="footer__links">
+            <li><a href="https://twitter.com" target="_blank" rel="noopener">Twitter / X</a></li>
+            <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="mailto:hello@aitools.dir">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 AI Tools Directory. All rights reserved.</span>
+        <span>
+          <a href="pages/about.html#affiliate" style="color: var(--text-tertiary);">
+            Affiliate Disclosure: Some links may earn us a commission.
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>
