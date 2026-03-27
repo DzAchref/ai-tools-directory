@@ -601,6 +601,7 @@ img {
   mask-composite: exclude;
   opacity: 0;
   transition: opacity var(--transition-slow);
+  pointer-events: none;
 }
 
 .tool-card:hover {

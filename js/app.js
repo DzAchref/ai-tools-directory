@@ -162,16 +162,14 @@ function renderTools() {
 
   grid.innerHTML = state.filteredTools.map((tool, index) => createToolCard(tool, index)).join('');
 
-  // Handle Visit button clicks via event delegation
+  // Track outbound clicks without blocking navigation
   grid.addEventListener('click', (e) => {
     const cta = e.target.closest('.tool-card__cta');
     if (cta) {
-      e.preventDefault();
       const toolId = cta.getAttribute('data-tool');
       const toolName = cta.getAttribute('data-tool-name');
-      const url = cta.getAttribute('href');
       trackOutboundClick(toolId, toolName);
-      window.open(url, '_blank', 'noopener,noreferrer');
+      // Don't preventDefault — let the <a> tag navigate naturally
     }
   });
 
