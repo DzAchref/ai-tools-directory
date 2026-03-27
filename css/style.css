@@ -734,6 +734,8 @@ img {
 }
 
 .tool-card__cta {
+  position: relative;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   gap: var(--space-xs);

@@ -162,6 +162,19 @@ function renderTools() {
 
   grid.innerHTML = state.filteredTools.map((tool, index) => createToolCard(tool, index)).join('');
 
+  // Handle Visit button clicks via event delegation
+  grid.addEventListener('click', (e) => {
+    const cta = e.target.closest('.tool-card__cta');
+    if (cta) {
+      e.preventDefault();
+      const toolId = cta.getAttribute('data-tool');
+      const toolName = cta.getAttribute('data-tool-name');
+      const url = cta.getAttribute('href');
+      trackOutboundClick(toolId, toolName);
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+  });
+
   // Animate cards in with IntersectionObserver
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -202,10 +215,10 @@ function createToolCard(tool, index) {
           <span class="tool-card__rating-stars">${starsHtml}</span>
           <span>${tool.rating}</span>
         </div>
-        <a href="${tool.affiliateUrl}" target="_blank" rel="noopener noreferrer"
+        <a href="${tool.website}" target="_blank" rel="noopener noreferrer"
            class="tool-card__cta"
            data-tool="${tool.id}"
-           onclick="trackOutboundClick('${tool.id}', '${tool.name}')">
+           data-tool-name="${tool.name.replace(/"/g, '&quot;')}">
           Visit <span class="tool-card__cta-arrow">→</span>
         </a>
       </div>
